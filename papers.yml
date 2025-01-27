@@ -1,0 +1,1562 @@
+- abstract: The BabyLM Challenge is a community effort to close the data-efficiency
+    gap between human and computational language learners. Participants compete to
+    optimize language model training on a fixed language data budget of 100 million
+    words or less. This year, we released improved text corpora, as well as a
+    vision-and-language corpus to facilitate research into cognitively plausible
+    vision language models. Submissions were compared on evaluation tasks targeting
+    grammatical ability, (visual) question answering, pragmatic abilities, and grounding,
+    among other abilities. Participants could submit to a 10M-word text-only track, a
+    100M-word text-only track, and/or a 100M-word and image multimodal track. From
+    31 submissions employing diverse methods, a hybrid causal-masked language model
+    architecture outperformed other approaches. No submissions outperformed the baselines
+    in the multimodal track. In follow-up analyses, we found a strong relationship between
+    training FLOPs and average performance across tasks, and that the best-performing
+    submissions proposed changes to the training data, training objective, and model
+    architecture. This year's BabyLM Challenge shows that there is still significant
+    room for innovation in this setting, in particular for image-text modeling, but
+    community-driven research can yield actionable insights about effective strategies
+    for small-scale language modeling.
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area: N/A
+  authors:
+  - emails: michael.hu@nyu.edu
+    first_name: Michael
+    last_name: Hu
+    institution: New York University
+  - first_name: Aaron
+    last_name: Mueller
+    institution: Northeastern University
+  - first_name: Candace
+    last_name: Ross
+    institution: Meta
+  - first_name: Adina
+    last_name: Williams
+    institution: Meta
+  - first_name: Tal
+    last_name: Linzen
+    institution: New York University
+  - first_name: Chengxu
+    last_name: Zhuang
+    institution: MIT
+  - first_name: Ryan
+    last_name: Cotterell
+    institution: ETH Zürich
+  - first_name: Leshem
+    last_name: Choshen
+    institution: MIT
+  - first_name: Alex
+    last_name: Warstadt
+    institution: ETH Zürich
+  - first_name: Ethan Gotlieb
+    last_name: Wilcox
+    institution: Georgetown University
+  decision: Submission
+  file: 0.pdf
+  id: 0
+  title: 'Findings of the Second BabyLM Challenge: Sample-Efficient Pretraining on Developmentally Plausible Corpora'
+- abstract: In this work, we explain our approach employed in the BabyLM Challenge,
+    which uses various methods of training language models (LMs) with significantly
+    less data compared to traditional large language models (LLMs) and are inspired
+    by how human children learn. While a human child is exposed to far less linguistic
+    input than an LLM, they still achieve remarkable language understanding and generation
+    abilities. To this end, we develop a model trained on a curated dataset consisting
+    of 10 million words, primarily sourced from child-directed transcripts. The 2024
+    BabyLM Challenge initial dataset of 10M words is filtered to 8.5M. Next, it is
+    supplemented with a randomly selected subset of TVR dataset consisting of 1.5M
+    words of television dialogues. The latter dataset ensures that similar to children,
+    the model is also exposed to language through media. Furthermore, we reduce the
+    vocabulary size to 32,000 tokens, aligning it with the limited vocabulary of children
+    in the early stages of language acquisition. We use curriculum learning and is
+    able to match the baseline on certain benchmarks while surpassing the baseline
+    on others. Additionally, incorporating common LLM training datasets, such as MADLAD-400,
+    degrades performance. These findings underscore the importance of dataset selection,
+    vocabulary scaling, and curriculum learning in creating more data-efficient language
+    models that better mimic human learning processes.
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area:
+    - Strict-small
+  authors:
+  - emails: ghanizadeh.amin@ut.ac.ir
+    first_name: Mohammad
+    institution: University of Tehran, University of Tehran
+    last_name: Ghanizadeh
+    middle_name: Amin
+    name: Mohammad Amin Ghanizadeh
+    username: ~Mohammad_Amin_Ghanizadeh1
+  - dblp_id: https://dblp.org/pid/84/11158
+    emails: mjdousti@ut.ac.ir
+    first_name: Mohammad Javad
+    google_scholar_id: https://scholar.google.com/citations?user=EGv2ij0AAAAJ
+    institution: University of Tehran, University of Tehran
+    last_name: Dousti
+    name: Mohammad Javad Dousti
+    semantic_scholar_id: https://www.semanticscholar.org/author/M.-Dousti/1702695
+    username: ~Mohammad_Javad_Dousti2
+  decision: Submission
+  file: 2.pdf
+  id: 2
+  openreview_id: dzR5QJdW4F
+  pdf_file: 26fefdc5cb179cfefd233728a22fe67c72539016.pdf
+  title: 'Towards Data-Efficient Language Models: A Child-Inspired Approach to Language
+    Learning'
+- abstract: "Language models (LMs) exhibit significant data \ninefficiency compared\
+    \ to human learners. A child is able \nto master language while consuming less\
+    \ than 100 million words \nof input, while language models require orders of magnitude\
+    \ \nmore tokens during training.  \n\nOur submission to the BabyLM Challenge utilizes\
+    \ a combination of \nself-distillation and reverse-distillation to train a sequence\
+    \ of ensemble models with \nimproved training characteristics on a fixed-size\
+    \ 10 million-word dataset. \n\nSelf-distillation is used to generate an ensemble\
+    \ of models of a \ncertain fixed size, while reverse distillation is used to train\
+    \ \na more expressive larger model from a previously trained \ngeneration of relatively\
+    \ smaller models, while largely \npreserving learned accuracy.\n\nWe find that\
+    \ ensembles consisting of two smaller models and \none identical born-again model\
+    \ serve as ideal ensembles for \neach trained generation of model size.  \nWe\
+    \ demonstrate that, although our method is not novel, it \nprovides consistent\
+    \ and modest performance improvements \non the BLiMP and GLUE benchmarks."
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area:
+    - Strict-small
+  authors:
+  - emails: aakarsh.nair@student.uni-tuebingen.de
+    first_name: Aakarsh
+    institution: Eberhard-Karls-Universität Tübingen and Portland State University
+    last_name: Nair
+    name: Aakarsh Nair
+    username: ~Aakarsh_Nair1
+  - emails: alina.hancharova@student.uni-tuebingen.de
+    first_name: Alina
+    last_name: Hancharova
+    name: Alina Hancharova
+    username: ~Alina_Hancharova1
+  - emails: mayank.kumar@student.uni-tuebingen.de
+    first_name: Mayank
+    institution: Eberhard-Karls-Universität Tübingen
+    last_name: Kumar
+    username: mayank.kumar@student.uni-tuebingen.de
+  - emails: ali.gharaee@student.uni-tuebingen.de
+    first_name: Ali
+    last_name: Gharaee
+    name: Ali Gharaee
+    username: ~Ali_Gharaee1
+  decision: Submission
+  file: 3.pdf
+  id: 3
+  openreview_id: OwF2oVmFkV
+  pdf_file: e9eb7bd7efb8d14b9a2dc6651557c423e34439b7.pdf
+  title: 'BabyLM Challenge:  Experimenting with Self-Distillation and Reverse-Distillation
+    for Language Model Pre-Training on Constrained Datasets'
+- abstract: Language models are typically trained on large corpora of text in their
+    default orthographic form. However, this is not the only option; representing
+    data as streams of phonemes can offer unique advantages, from deeper insights
+    into phonological language acquisition to improved performance on sound-based
+    tasks. The challenge lies in evaluating the impact of phoneme-based training,
+    as most benchmarks are also orthographic. To address this, we develop a pipeline
+    to convert text datasets into a continuous stream of phonemes. We apply this pipeline
+    to the 100-million-word pre-training dataset from the BabyLM challenge, as well
+    as to standard language and grammatical benchmarks, enabling us to pre-train and
+    evaluate a model using phonemic input representations. Our results show that while
+    phoneme-based training slightly reduces performance on traditional language understanding
+    tasks, it offers valuable analytical and practical benefits.
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area:
+    - Strict
+    - Paper
+  authors:
+  - emails: zg258@cam.ac.uk
+    first_name: Zebulon
+    google_scholar_id: https://scholar.google.co.uk/citations?user=khr4FKUAAAAJ&hl=en&authuser=1
+    homepage: https://sitebyzeb.com/research/
+    institution: University of Cambridge
+    last_name: Goriely
+    name: Zebulon Goriely
+    orcid: https://orcid.org/0000-0002-8877-4099
+    username: ~Zebulon_Goriely1
+  - emails: richarddiehl@gmail.com
+    first_name: Richard
+    google_scholar_id: https://scholar.google.com/citations?user=E9HDYC4AAAAJ&hl=en
+    homepage: https://www.richarddiehlmartinez.com
+    institution: University of Cambridge
+    last_name: Diehl Martinez
+    name: Richard Diehl Martinez
+    username: ~Richard_Diehl_Martinez1
+  - dblp_id: https://dblp.org/pid/126/8732
+    emails: cainesap@gmail.com
+    first_name: Andrew
+    google_scholar_id: https://scholar.google.co.uk/citations?user=2M1Jo3sAAAAJ&hl=en
+    homepage: https://www.cl.cam.ac.uk/~apc38/
+    institution: University of Cambridge
+    last_name: Caines
+    name: Andrew Caines
+    semantic_scholar_id: https://www.semanticscholar.org/author/Andrew-Caines/143726824
+    username: ~Andrew_Caines1
+  - dblp_id: https://dblp.org/pid/45/8156
+    emails: pjb48@cam.ac.uk
+    first_name: Paula
+    homepage: https://www.cst.cam.ac.uk/people/pjb48
+    institution: University of Cambridge
+    last_name: Buttery
+    name: Paula Buttery
+    semantic_scholar_id: https://www.semanticscholar.org/author/P.-Buttery/33490976
+    username: ~Paula_Buttery1
+  - dblp_id: https://dblp.uni-trier.de/pid/154/8216
+    emails: lisa.beinborn@uni-goettingen.de
+    first_name: Lisa
+    google_scholar_id: https://scholar.google.de/citations?user=Mh5y8L0AAAAJ
+    homepage: https://beinborn.eu/
+    institution: Georg-August Universität Göttingen
+    last_name: Beinborn
+    name: Lisa Beinborn
+    semantic_scholar_id: https://www.semanticscholar.org/author/Lisa-Beinborn/2752573
+    username: ~Lisa_Beinborn1
+  decision: Submission
+  file: 4.pdf
+  id: 4
+  openreview_id: J6N0MLLXSU
+  pdf_file: fff472b50543acfa38494873c4766415666020ae.pdf
+  title: 'From Babble to Words: Pre-Training Language Models on Continuous Streams
+    of Phonemes'
+- abstract: 'We present grapheme-llama and phoneme-llama, character-based language
+    models trained for the 2024 BabyLM challenge. Through these models, we explore
+    an under-researched approach to downsizing: replacing subword-based tokenization
+    with character-level tokenization, drastically reducing the vocabulary size. The
+    grapheme model is trained on a standard BabyLM dataset, while the phoneme model
+    uses a phoneme-converted version of this dataset. Results show that grapheme-based
+    models perform better overall, achieving scores comparable to subword-based models
+    on grammatical benchmarks. Despite lower performance, phoneme models also demonstrate
+    promising grammatical learning. We argue that our results challenge conventional
+    wisdom on language modeling techniques and open up novel research questions with
+    character- and phoneme-based models as objects of inquiry.'
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area:
+    - Strict
+  authors:
+  - emails: bastian.bunzeck@uni-bielefeld.de
+    first_name: Bastian
+    homepage: https://ekvv.uni-bielefeld.de/pers_publ/publ/PersonDetail.jsp;jsessionid=F2BE887D384AEEF658DEECDB57F2F1CF?personId=419963705
+    institution: Universität Bielefeld
+    last_name: Bunzeck
+    name: Bastian Bunzeck
+    orcid: https://orcid.org/0000-0002-1832-4068
+    username: ~Bastian_Bunzeck1
+  - dblp_id: https://dblp.org/pid/81/10649-1
+    emails: daniel\_duran@hotmail.com
+    first_name: Daniel
+    institution: Universität Bielefeld
+    last_name: Duran
+    name: Daniel Duran
+    orcid: https://orcid.org/0000-0001-6769-2281
+    username: ~Daniel_Duran1
+  - emails: leonie.schade@uni-bielefeld.de
+    first_name: Leonie
+    google_scholar_id: https://scholar.google.com/citations?hl=en&view_op=list_works&gmla=AC6lMd-C8bSsfj-XIUddMrwLVwAU2bcbKDwwPbWQYhY8B6bBIJheDRMR5rXaLp24dUf4jFecmQjYccYw6qtqDQ&user=6g8wK8EAAAAJ
+    homepage: https://ekvv.uni-bielefeld.de/pers_publ/publ/PersonDetail.jsp?personId=194696727&lang=EN
+    institution: Universität Bielefeld
+    last_name: Schade
+    name: Leonie Schade
+    orcid: https://orcid.org/0009-0000-1796-1543
+    username: ~Leonie_Schade1
+  - dblp_id: https://dblp.org/pid/49/8155
+    emails: sina.zarriess@uni-bielefeld.de
+    first_name: Sina
+    google_scholar_id: https://scholar.google.de/citations?user=7OOP0iAAAAAJ&hl=de&oi=ao
+    homepage: https://sinazarriess.github.io/
+    institution: Bielefeld University
+    last_name: Zarrieß
+    name: Sina Zarrieß
+    orcid: https://orcid.org/0000-0002-1384-1218
+    semantic_scholar_id: https://www.semanticscholar.org/author/Sina-Zarrie%C3%9F/1721364
+    username: ~Sina_Zarrieß1
+  decision: Submission
+  file: 5.pdf
+  id: 5
+  openreview_id: AWpr5btqzF
+  pdf_file: 7d3035cb5e6db66bd8a0db4eb92c9b3ca456aa32.pdf
+  title: 'Graphemes vs. phonemes: battling it out in character-based language models'
+- abstract: 'For specialized domains, there is often not a wealth of data with which
+    to train large machine learning models. In such limited data / compute settings,
+    various methods exist aiming to $\textit{do more with less}$, such as finetuning
+    from a pretrained model, modulating difficulty levels as data are presented to
+    a model (curriculum learning), and considering the role of model type / size.
+    Approaches to efficient $\textit{machine}$ learning also take inspiration from
+    $\textit{human}$ learning by considering use cases where machine learning systems
+    have access to approximately the same number of words experienced by a 13 year
+    old child (100M words). We investigate the role of 3 primary variables in a limited
+    data regime as part of the multimodal track of the BabyLM challenge. We contrast:
+    (i) curriculum learning, (ii), pretraining (with text-only data), (iii) model
+    type. We modulate these variables and assess them on two types of tasks: (a) multimodal
+    (text+image), and (b) unimodal (text-only) tasks. We find that curriculum learning
+    benefits multimodal evaluations over non-curriclum learning models, particularly
+    when combining text-only pretraining. On text-only tasks, curriculum learning
+    appears to help models with smaller trainable parameter counts. We suggest possible
+    reasons based on architectural differences and training designs as to why one
+    might observe such results.'
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area:
+    - Multimodal
+  authors:
+  - emails: rohansaha60@gmail.com
+    first_name: Rohan
+    google_scholar_id: https://scholar.google.com/citations?user=wukZyRkAAAAJ&hl=en
+    homepage: https://simpleparadox.github.io/
+    last_name: Saha
+    name: Rohan Saha
+    orcid: https://orcid.org/0000-0001-9747-0057
+    username: ~Rohan_Saha1
+  - dblp_id: https://dblp.org/pid/322/5627
+    emails: afahim2@ualberta.ca
+    first_name: Abrar
+    google_scholar_id: https://scholar.google.ca/citations?hl=en&user=DnJ6oSYAAAAJ
+    institution: ', University of Alberta'
+    last_name: Fahim
+    name: Abrar Fahim
+    username: ~Abrar_Fahim1
+  - dblp_id: https://dblp.org/pid/30/3660
+    emails: alona@ualberta.ca
+    first_name: Alona
+    google_scholar_id: https://scholar.google.ca/citations?user=Vw8z7qwAAAAJ&hl=en
+    homepage: http://webdocs.cs.ualberta.ca/~alona/
+    institution: University of Alberta
+    last_name: Fyshe
+    name: Alona Fyshe
+    orcid: https://orcid.org/0000-0003-4367-0306
+    semantic_scholar_id: https://www.semanticscholar.org/author/Alona-Fyshe/2655967
+    username: ~Alona_Fyshe1
+  - dblp_id: https://dblp.org/pid/249/0878.html
+    emails: murphyalex@gmail.com
+    first_name: Alex
+    google_scholar_id: https://scholar.google.com/citations?user=edcq_qcAAAAJ&hl=en
+    homepage: https://alxmrphi.com/
+    last_name: Murphy
+    name: Alex Murphy
+    orcid: https://orcid.org/0000-0001-6155-0514
+    username: ~Alex_Murphy1
+  decision: Submission
+  file: 6.pdf
+  id: 6
+  openreview_id: 3r11eFlXmB
+  pdf_file: 73caf07535abb65849dac48190b50715af9002a1.pdf
+  title: 'Exploring Curriculum Learning for Vision-Language Tasks: A Study on Small-Scale
+    Multimodal Training'
+- abstract: "This paper explores the potential of recurrent neural networks (RNNs)\
+    \ and other subquadratic architectures as competitive alternatives to transformer-based\
+    \ models in low-resource language modeling scenarios. \nWe utilize HGRN2 (Qin\
+    \ et al., 2024), a recently proposed RNN-based architecture, and comparatively\
+    \ evaluate its effectiveness against transformer-based baselines and other subquadratic\
+    \ architectures (LSTM, xLSTM, Mamba). Our experimental results show that \\methodname{},\
+    \ our HGRN2 language model, outperforms transformer-based models in both the 10M\
+    \ and 100M word tracks of the challenge, as measured by their performance on the\
+    \ BLiMP, EWoK, GLUE and BEAR benchmarks. Further, we show the positive impact\
+    \ of knowledge distillation. Our findings challenge the prevailing focus on transformer\
+    \ architectures and indicate the viability of RNN-based models, particularly in\
+    \ resource-constrained environments."
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area:
+    - Strict-small
+    - Strict
+  authors:
+  - emails: patrickhaller40@googlemail.com
+    first_name: Patrick
+    google_scholar_id: https://scholar.google.de/citations?user=ZFe7wn4AAAAJ&hl=de
+    homepage: https://github.com/HallerPatrick
+    institution: Humboldt Universität Berlin
+    last_name: Haller
+    name: Patrick Haller
+    username: ~Patrick_Haller2
+  - emails: goldejon@informatik.hu-berlin.de
+    first_name: Jonas
+    google_scholar_id: https://scholar.google.de/citations?user=QVG2t4gAAAAJ&hl=de&oi=ao
+    institution: Department of Computer Science, Humboldt University Berlin, Humboldt
+      Universität Berlin
+    last_name: Golde
+    name: Jonas Golde
+    semantic_scholar_id: https://www.semanticscholar.org/author/J.-Golde/144983077
+    username: ~Jonas_Golde1
+  - dblp_id: https://dblp.org/pid/127/0198
+    emails: alan.akbik@gmail.com
+    first_name: Alan
+    google_scholar_id: https://scholar.google.com/citations?user=adKmg3IAAAAJ&hl=en
+    homepage: https://alanakbik.github.io/
+    institution: Humboldt Universität Berlin
+    last_name: Akbik
+    name: Alan Akbik
+    semantic_scholar_id: https://www.semanticscholar.org/author/A.-Akbik/2403712
+    username: ~Alan_Akbik2
+  decision: Submission
+  file: 7.pdf
+  id: 7
+  openreview_id: kLGbjP1wVu
+  pdf_file: 33bd6a7cb2f262a3d973fe8f7b12503c7078fb77.pdf
+  title: 'BabyHGRN: Exploring RNNs for Sample-Efficient Language Modeling'
+- abstract: This study presents our submission to the Strict-Small Track of the 2nd
+    BabyLM Challenge. We use a teacher-student distillation setup with the BabyLLaMa
+    model (Timiryasov and Tastet, 2023) as a backbone. To make the student's learning
+    process more focused, we replace the objective function with a reverse Kullback-Leibler
+    divergence, known to cause mode-seeking (rather than mode-averaging) behaviour
+    in computational learners. We further experiment with having a single teacher
+    (instead of an ensemble of two teachers) and implement additional optimization
+    strategies to improve the distillation process. Our experiments show that  under
+    reverse KL divergence, a single-teacher model often outperforms or matches multiple-teacher
+    models across most tasks. Additionally, incorporating advanced optimization techniques
+    further enhances model performance, demonstrating the effectiveness and robustness
+    of our proposed approach. These findings support our idea that "choosy babies
+    need one coach".
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area:
+    - Strict-small
+  authors:
+  - emails: shaozhen.shi@rug.nl
+    first_name: Shi
+    homepage: https://www.rug.nl/staff/shaozhen.shi/
+    last_name: Shaozhen
+    name: Shi Shaozhen
+    username: ~Shi_Shaozhen1
+  - dblp_id: https://dblp.org/pid/176/0029.html
+    emails: yevgen.matusevych@rug.nl
+    first_name: Yevgen
+    google_scholar_id: https://scholar.google.com/citations?user=BPCSGWcAAAAJ&hl
+    homepage: https://yevgen.web.rug.nl
+    institution: University of Groningen
+    last_name: Matusevych
+    name: Yevgen Matusevych
+    orcid: https://orcid.org/0000-0003-2910-4025
+    semantic_scholar_id: https://www.semanticscholar.org/author/Yevgen-Matusevych/3130103
+    username: ~Yevgen_Matusevych1
+  - dblp_id: https://dblp.org/pid/91/2392
+    emails: m.nissim@rug.nl
+    first_name: Malvina
+    google_scholar_id: https://scholar.google.com/citations?user=hnTpEOAAAAAJ
+    homepage: https://malvinanissim.github.io
+    institution: University of Groningen
+    last_name: Nissim
+    name: Malvina Nissim
+    semantic_scholar_id: https://www.semanticscholar.org/author/M.-Nissim/2742475
+    username: ~Malvina_Nissim1
+  decision: Submission
+  file: 8.pdf
+  id: 8
+  openreview_id: PLUEBqZwsZ
+  pdf_file: ae30bf40bf2d7f7ce23f055429682c0071f49b9e.pdf
+  title: 'Choosy Babies Need One Coach: Inducing Mode-Seeking Behavior in BabyLlama
+    with Reverse KL Divergence'
+- abstract: 'This work explores alternative gating systems in simple Recurrent Neural
+    Networks (RNNs) that induce linguistically motivated biases during training, ultimately
+    affecting models’ performance on the BLiMP task. We focus exclusively on the BabyLM
+    10M training corpus (Strict-Small Track). Our experiments reveal that: (i) standard
+    RNN variants—LSTMs and GRUs—are insufficient for properly learning the relevant
+    set of linguistic constraints; (ii) the quality or size of the training corpus
+    has little impact on these networks, as demonstrated by the comparable performance
+    of LSTMs trained exclusively on the child-directed speech portion of the corpus;
+    (iii) increasing the size of the embedding and hidden layers does not significantly
+    improve performance. In contrast, specifically gated RNNs (eMG-RNNs), inspired
+    by certain Minimalist Grammar intuitions, exhibit advantages in both training
+    loss and BLiMP accuracy.'
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area:
+    - Strict-small
+  authors:
+  - emails: cristiano.chesi@iusspavia.it
+    first_name: Cristiano
+    homepage: http://www.iusspavia.it/-/faculty-cristiano-chesi
+    institution: Istituto Universitario di Studi Superiori
+    last_name: Chesi
+    name: Cristiano Chesi
+    username: ~Cristiano_Chesi1
+  - emails: matilde.barbini@iusspavia.it
+    first_name: Matilde
+    last_name: Barbini
+    name: Matilde Barbini
+    username: ~Matilde_Barbini1
+  - emails: letizia.piccinibianchessi@iusspavia.it
+    first_name: Maria
+    institution: Istituto Universitario di Studi Superiori
+    last_name: Bianchessi
+    middle_name: Letizia Piccini
+    name: Maria Letizia Piccini Bianchessi
+    orcid: https://orcid.org/0009-0005-8116-3358
+    username: ~Maria_Letizia_Piccini_Bianchessi1
+  - emails: veronica.bressan@iusspavia.it
+    first_name: Veronica
+    institution: University School for Advanced Studies IUSS
+    last_name: Bressan
+    name: Veronica Bressan
+    orcid: https://orcid.org/0000-0003-3072-7967
+    username: ~Veronica_Bressan1
+  - emails: achille.fusco@iusspavia.it
+    first_name: Achille
+    google_scholar_id: https://scholar.google.com/citations?user=tvAJU0YAAAAJ&hl=it
+    institution: Istituto Universitario di Studi Superiori
+    last_name: Fusco
+    name: Achille Fusco
+    orcid: https://orcid.org/0000-0002-5389-8884
+    username: ~Achille_Fusco1
+  - emails: sofia.neri@iusspavia.it
+    first_name: Sofia
+    institution: NA
+    last_name: Neri
+    username: sofia.neri@iusspavia.it
+  - emails: sarah.rossi@iusspavia.it
+    first_name: Sarah
+    institution: NA
+    last_name: Rossi
+    username: sarah.rossi@iusspavia.it
+  - emails: tommaso.sgrizzi@iusspavia.it
+    first_name: Tommaso
+    homepage: https://tomsgrizzi.github.io
+    institution: Istituto Universitario di Studi Superiori
+    last_name: Sgrizzi
+    name: Tommaso Sgrizzi
+    username: ~Tommaso_Sgrizzi1
+  decision: Submission
+  file: 9.pdf
+  id: 9
+  openreview_id: nAD0R1tkOe
+  pdf_file: b45c43b69c23c3fe8d3cea2160284ff3c385c3db.pdf
+  title: 'Different Ways to Forget: Linguistic Gates in Recurrent Neural Networks'
+- abstract: 'Large language models demonstrate emergent modularity, where functionally
+    specialized components and circuits arise to handle specific tasks or task formats.
+    If similar modules arise in models trained on more cognitively plausible datasets,
+    it could inform debates surrounding what kinds of  would be learnable given more
+    human-like language learning signals. In this paper, we describe a multimodal
+    vision-language model submitted to the BabyLM Challenge. Our model achieves similar
+    performance to the best-performing architectures from last year, though visual
+    information does not improve performance on text-only tasks over text-only models
+    (in accordance with prior findings). To better understand how the model processes
+    the evaluation tasks of the BabyLM Challenge, we leverage causal interpretability
+    methods to locate the neurons that contribute to the model''s final decisions.
+    We find that the models we train are highly modular: distinct components arise
+    to process related tasks. Furthermore, on text-and-image tasks, adding or removing
+    visual inputs causes the model to use distinct components to process the same
+    textual inputs. This suggests that modal and task-specific specialization is efficiently
+    learned, and that a high degree of functional specialization arises in even small-scale
+    language models.'
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area:
+    - Multimodal
+  authors:
+  - emails: alina.klerings@uni-mannheim.de
+    first_name: Alina
+    institution: Universität Mannheim
+    last_name: Klerings
+    name: Alina Klerings
+    username: ~Alina_Klerings1
+  - dblp_id: https://dblp.org/pid/15/73.html
+    emails: bartelt@uni-mannheim.de
+    first_name: Christian
+    google_scholar_id: https://scholar.google.de/citations?user=9FcF1gwAAAAJ&hl=de
+    institution: Universität Mannheim
+    last_name: Bartelt
+    name: Christian Bartelt
+    orcid: https://orcid.org/0000-0001-8660-5286
+    semantic_scholar_id: https://www.semanticscholar.org/author/Christian-Bartelt/1768219
+    username: ~Christian_Bartelt1
+  - dblp_id: https://dblp.org/pid/248/7949
+    emails: aa.mueller@northeastern.edu
+    first_name: Aaron
+    google_scholar_id: https://scholar.google.com/citations?user=lhwxXg4AAAAJ&hl=en#
+    homepage: https://aaronmueller.github.io
+    institution: Northeastern University and Technion - Israel Institute of Technology,
+      Technion
+    last_name: Mueller
+    name: Aaron Mueller
+    semantic_scholar_id: https://www.semanticscholar.org/author/Aaron-Mueller/49355602
+    username: ~Aaron_Mueller1
+  decision: Submission
+  file: 10.pdf
+  id: 10
+  openreview_id: kOEIfSrO3w
+  pdf_file: 8d59cf124093f4fac96e3910db5b48b7f089f125.pdf
+  title: Developmentally Plausible Multimodal Language Models Are Highly Modular
+- abstract: This paper investigates the effect of including a parser network, which
+    produces syntactic heights and distances to perform unsupervised parsing, in the
+    Every Layer Counts BERT (ELC-BERT) architecture trained on 10M tokens for the
+    2024 BabyLM challenge. The parser network's inclusion in this setup shows little
+    or no improvement over the ELC-BERT baseline for the BLiMP and GLUE evaluation,
+    but, in particular domains of the EWoK evaluation framework, its inclusion shows
+    promise for improvement and raises interesting questions about its effect on learning
+    different concepts.
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area:
+    - Strict-small
+  authors:
+  - emails: r.behr@northeastern.edu
+    first_name: Rufus
+    google_scholar_id: https://scholar.google.com/citations?user=NeSBM9oAAAAJ
+    homepage: https://sufurelite.github.io/
+    institution: Northeastern University
+    last_name: Behr
+    name: Rufus Behr
+    username: ~Rufus_Behr1
+  decision: Submission
+  file: 11.pdf
+  id: 11
+  openreview_id: hmeHXK2OzA
+  pdf_file: 07f44ca9c6d1b17d3e9b540b769035338294d4a3.pdf
+  title: 'ELC-ParserBERT: Low-Resource Language Modeling Utilizing a Parser Network
+    With ELC-BERT'
+- abstract: BabyLM paves the way for a range of experiments aimed at better understanding
+    language models (LMs) and the differences and similarities between human and artificial
+    language learning.  However, the current framework is limited to the English language
+    and a narrow but significant range of evaluation metrics, primarily focused on
+    syntax, semantics, and pragmatics. In this paper, we propose some steps towards
+    extending the framework to other languages, specifically Mandarin Chinese and
+    French, leveraging existing linguistic resources for these languages. Additionally,
+    we advocate for greater exploration of genre variations within subcorpora for
+    training LMs, as well as for the adoption of additional evaluation metrics with
+    different underlying principles. Our proposal consists of using high-quality spontaneous
+    speech corpora as a source for extracting production-related variables, which
+    the models are then fine-tuned to predict. We hypothesize that these production-related
+    features offer insights into the language processing mechanisms underlying the
+    data and that cognitively sensitive models should outperform others in predicting
+    these features. Specifically, we propose focusing on the prediction of phenomena
+    such as speech reductions, prosodic prominences, sequences co-occurring with listeners'
+    backchannels, and disfluencies. To illustrate our approach, we present an example
+    involving the prediction of speech reductions in spontaneous speech in two different
+    languages (French and English), using models trained on 10 million tokens from
+    different data source mixtures. Although the results are preliminary, they suggest
+    that this task can characterize models for predicting human language processing.
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area:
+    - Paper
+  authors:
+  - dblp_id: https://dblp.org/pid/16/3156.html
+    emails: laurent.prevot@univ-amu.fr
+    first_name: Laurent
+    google_scholar_id: https://scholar.google.com/citations?user=xxXNsDgAAAAJ&hl=en
+    homepage: https://www.lpl-aix.fr/contact/laurent-prevot/
+    institution: Université d'Aix-Marseille
+    last_name: Prevot
+    name: Laurent Prevot
+    orcid: https://orcid.org/0000-0002-2463-2382
+    username: ~Laurent_Prevot1
+  - emails: sfw268@nyu.edu
+    first_name: Sheng-Fu
+    google_scholar_id: https://scholar.google.com/citations?user=In8OolwAAAAJ
+    institution: Academia Sinica
+    last_name: Wang
+    name: Sheng-Fu Wang
+    username: ~Sheng-Fu_Wang1
+  - emails: jajoanne.chi88@gmail.com
+    first_name: Jou-An
+    institution: NA
+    last_name: Chi
+    username: jajoanne.chi88@gmail.com
+  - dblp_id: https://dblp.org/pid/05/864
+    emails: shukaihsieh@ntu.edu.tw
+    first_name: Shu-Kai
+    google_scholar_id: https://scholar.google.com.tw/citations?user=l9l-_xYAAAAJ&hl=zh-TW&authuser=1
+    institution: National Taiwan University
+    last_name: Hsieh
+    name: Shu-Kai Hsieh
+    semantic_scholar_id: https://www.semanticscholar.org/search?q=shukai%20hsieh&sort=relevance
+    username: ~Shu-Kai_Hsieh1
+  decision: Submission
+  file: 12.pdf
+  id: 12
+  openreview_id: dhBhWGwoW5
+  pdf_file: 1193a750f1dc522f624052e576a3dbc4bdbd872b.pdf
+  title: 'Extending the BabyLM Initiative : Promoting Diversity in Datasets and Metrics
+    through High-Quality Linguistic Corpora'
+- abstract: In this paper, we investigate the integration of latent conceptual knowledge
+    into the pre-training of masked language models. Our solution is based on the
+    use of an auxiliary model, from which we extract training signals for training
+    a student model. We determine the training signals from the hidden representations
+    of the student model in an unsupervised way, using sparse coding. Models trained
+    on latent concepts alone have an improved fine-tunability on downstream tasks,
+    however, they perform worse on traditional language modeling, i.e., when the goal
+    is to output missing tokens as opposed to latent semantic classes of words. In
+    order to preserve the improved fine-tuning capability of the models, while making
+    them better at the task of language modeling, we propose a final stage of pre-training,
+    during which we perform traditional masked language modeling. The final stage
+    of pre-training is based on a model that has already been pre-trained on the task
+    of modeling latent semantic properties, with the weights of the backbone model
+    being frozen. During the final training phase, we only train a lightweight linear
+    classifier layer on top of the logits that the model determines for the latent
+    semantic properties. With this modification, we can obtain the benefits of both
+    the traditional training paradigms and the one which is based on the use of latent
+    semantic properties. We release our source code at \url{github.com/SzegedAI/MLSM}.
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area:
+    - Strict-small
+    - Strict
+  authors:
+  - dblp_id: https://dblp.uni-trier.de/pers/hb/b/Berend:G=aacute=bor
+    emails: berendg@inf.u-szeged.hu
+    first_name: Gábor
+    google_scholar_id: https://scholar.google.hu/citations?user=JMafrTEAAAAJ
+    homepage: https://begab.github.io/
+    institution: University of Szeged
+    last_name: Berend
+    name: Gábor Berend
+    orcid: https://orcid.org/0000-0002-3845-4978
+    semantic_scholar_id: https://www.semanticscholar.org/author/G%C3%A1bor-Berend/2866858
+    username: ~Gábor_Berend1
+  decision: Submission
+  file: 13.pdf
+  id: 13
+  openreview_id: UV4ZdKwkZk
+  pdf_file: 8b65d81999ef4f572d8db0f2d486d03f9edd13e1.pdf
+  title: Integrating Quasi-symbolic Conceptual Knowledge into Language Model Pre-training
+- abstract: "This paper describes a linguistically-motivated approach to the 2024\
+    \ edition of the BabyLM Challenge. Rather than pursuing a first language learning\
+    \ (L1) paradigm, we approach the challenge from a second language (L2) learning\
+    \ perspective. In L2 learning, there is a stronger focus on learning explicit\
+    \ linguistic information, such as grammatical notions,  definitions of words or\
+    \ different ways of expressing a meaning. This makes L2 learning potentially more\
+    \ efficient and concise. \nWe approximate this using data from Wiktionary, grammar\
+    \ examples either generated by an LLM or sourced from grammar books, and paraphrase\
+    \ data.\nWe find that explicit information about word meaning (in our case, Wiktionary)\
+    \ does not boost model performance, while grammatical information can give a small\
+    \ improvement. The most impactful data ingredient is sentence paraphrases, with\
+    \ our two best models being trained on 1) a mix of paraphrase data and data from\
+    \ the BabyLM pretraining dataset, and 2) exclusively paraphrase data."
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area:
+    - Strict-small
+  authors:
+  - emails: lukas@cis.lmu.de
+    first_name: Lukas
+    google_scholar_id: https://scholar.google.com/citations?user=QKJ4hkoAAAAJ
+    institution: Ludwig-Maximilians-Universität München
+    last_name: Edman
+    name: Lukas Edman
+    semantic_scholar_id: https://www.semanticscholar.org/author/Lukas-Edman/1381417839
+    username: ~Lukas_Edman1
+  - emails: e.g.bylinina@rug.nl
+    first_name: Lisa
+    google_scholar_id: https://scholar.google.com/citations?user=8ZBQ3bsAAAAJ&hl=en
+    homepage: https://bylinina.github.io/
+    institution: Utrecht University
+    last_name: Bylinina
+    name: Lisa Bylinina
+    username: ~Lisa_Bylinina1
+  - dblp_id: https://dblp.org/pid/308/0453
+    emails: faeze.ghorbanpour@lmu.de
+    first_name: Faeze
+    google_scholar_id: https://scholar.google.com/citations?user=GQTf-pYAAAAJ&hl=en
+    homepage: https://faezeghorbanpour.github.io/
+    last_name: Ghorbanpour
+    name: Faeze Ghorbanpour
+    username: ~Faeze_Ghorbanpour1
+  - dblp_id: https://dblp.org/pid/145/8377.html
+    emails: fraser@cis.lmu.de
+    first_name: Alexander
+    google_scholar_id: https://scholar.google.com/citations?user=4ZIZK08AAAAJ
+    homepage: https://alexfraser.github.io/
+    institution: Technical University of Munich
+    last_name: Fraser
+    name: Alexander Fraser
+    semantic_scholar_id: https://www.semanticscholar.org/author/Alexander-M.-Fraser/2277248
+    username: ~Alexander_Fraser1
+  decision: Submission
+  file: 14.pdf
+  id: 14
+  openreview_id: FXtqrpvbYg
+  pdf_file: e6b2eac6ea793da5a185933b3ed89c1acad85f74.pdf
+  title: Are BabyLMs Second Language Learners?
+- abstract: Curriculum Learning has been a popular strategy to improve the cognitive
+    plausibility of Small-Scale Language Models (SSLMs) in the BabyLM Challenge. However,
+    it has not led to considerable improvements over non-curriculum models. We assess
+    whether theoretical linguistic acquisition theories can be used to specify more
+    fine-grained curriculum learning strategies, creating age-ordered corpora of Child-Directed
+    Speech for four typologically distant language families to implement SSLMs and
+    acquisition-inspired curricula cross-lingually. Comparing the success of three
+    objective curricula (Growing, Inwards & MMM) that precisely replicate the predictions
+    of acquisition theories on a standard SSLM architecture, we find fine-grained
+    acquisition-inspired curricula can outperform non-curriculum baselines and performance
+    benefits of curricula strategies in SSLMs can be derived by specifying fine-grained
+    language-specific curricula that precisely replicate language acquisition theories.
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area:
+    - Paper
+  authors:
+  - emails: sas245@cam.ac.uk
+    first_name: Suchir
+    homepage: https://www.suchirsalhan.com/
+    institution: University of Cambridge
+    last_name: Salhan
+    name: Suchir Salhan
+    username: ~Suchir_Salhan1
+  - emails: richarddiehl@gmail.com
+    first_name: Richard
+    google_scholar_id: https://scholar.google.com/citations?user=E9HDYC4AAAAJ&hl=en
+    homepage: https://www.richarddiehlmartinez.com
+    institution: University of Cambridge
+    last_name: Diehl Martinez
+    name: Richard Diehl Martinez
+    username: ~Richard_Diehl_Martinez1
+  - emails: zg258@cam.ac.uk
+    first_name: Zebulon
+    google_scholar_id: https://scholar.google.co.uk/citations?user=khr4FKUAAAAJ&hl=en&authuser=1
+    homepage: https://sitebyzeb.com/research/
+    institution: University of Cambridge
+    last_name: Goriely
+    name: Zebulon Goriely
+    orcid: https://orcid.org/0000-0002-8877-4099
+    username: ~Zebulon_Goriely1
+  - dblp_id: https://dblp.org/pid/45/8156
+    emails: pjb48@cam.ac.uk
+    first_name: Paula
+    homepage: https://www.cst.cam.ac.uk/people/pjb48
+    institution: University of Cambridge
+    last_name: Buttery
+    name: Paula Buttery
+    semantic_scholar_id: https://www.semanticscholar.org/author/P.-Buttery/33490976
+    username: ~Paula_Buttery1
+  decision: Submission
+  file: 15.pdf
+  id: 15
+  openreview_id: PbPU2q73Qo
+  pdf_file: 1f608fb7ab771158ba77e7f9d23d851dc5065ab3.pdf
+  title: 'Less is More: Pre-Training Cross-Lingual Small-Scale Language Models with
+    Cognitively-Plausible Curriculum Learning Strategies'
+- abstract: We present a model for the Strict-Small track of the BabyLM Challenge
+    2024 (Choshen et al. 2024). We introduce a Curriculum Learning approach for training
+    a specialized version of GPT-2 (Radford et al. 2019), that we name ConcreteGPT.
+    We utilize the norms from (Brysbaert et al. 2014) which provide concreteness ratings
+    for 40,000 English lexical items based on human subjects. Using these norms, we
+    assign a concreteness score to each sentence in the training dataset and develop
+    two curriculum strategies that progressively introduce more complex and abstract
+    language patterns in the training data. Compared to the baselines, our best model
+    shows lower performance on zero-shot tasks but demonstrates superior performance
+    in fine-tuning tasks. Notably, our curriculum-trained models exhibit significant
+    improvements over a non-curriculum based training of the same model.
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area:
+    - Strict-small
+  authors:
+  - emails: luca.capone@fileli.unipi.it
+    first_name: Luca
+    google_scholar_id: https://scholar.google.com/citations?user=eEpryYsAAAAJ&hl=it
+    institution: University of Pisa
+    last_name: Capone
+    name: Luca Capone
+    orcid: https://orcid.org/0000-0002-1872-6956
+    username: ~Luca_Capone1
+  - emails: alessandro.bondielli@unipi.it
+    first_name: Alessandro
+    google_scholar_id: https://scholar.google.com/citations?user=zcXQk6YAAAAJ&hl=en
+    homepage: https://scholar.google.com/citations?user=zcXQk6YAAAAJ&hl=en
+    institution: Universita' di Pisa, University of Pisa
+    last_name: Bondielli
+    name: Alessandro Bondielli
+    username: ~Alessandro_Bondielli1
+  - dblp_id: https://dblp.org/pid/02/2701
+    emails: alessandro.lenci@unipi.it
+    first_name: Alessandro
+    homepage: https://people.unipi.it/alessandro_lenci/
+    institution: University of Pisa
+    last_name: Lenci
+    name: Alessandro Lenci
+    orcid: https://orcid.org/0000-0001-5790-4308
+    semantic_scholar_id: https://www.semanticscholar.org/author/2038285
+    username: ~Alessandro_Lenci2
+  decision: Submission
+  file: 16.pdf
+  id: 16
+  openreview_id: sx7KdA8MLE
+  pdf_file: c74befefd1ec49bd86a09334c150146e1eb37304.pdf
+  title: 'ConcreteGPT: A Baby GPT-2 Based on Lexical Concreteness and Curriculum Learning'
+- abstract: We present our submission to the BabyLM challenge, aiming to push the
+    boundaries of data-efficient language model pretraining. Our method builds upon
+    deep mutual learning, introducing a student model search for diverse initialization.
+    We address the limitation of treating students equally by formulating weighted
+    mutual learning as a bi-level optimization problem. The inner loop learns compact
+    students through online distillation, while the outer loop optimizes weights for
+    better knowledge distillation from diverse students. This dynamic weighting strategy
+    eliminates the need for a teacher model, reducing computational requirements.
+    Our evaluations show that teacher-less methods can match or surpass teacher-supervised
+    approaches.
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area:
+    - Strict-small
+    - Strict
+  authors:
+  - emails: srikrishna.rameshiyer@stengg.com
+    first_name: Srikrishna
+    google_scholar_id: https://scholar.google.com/citations?user=gHmg-iwAAAAJ&hl=en
+    last_name: Iyer
+    name: Srikrishna Iyer
+    username: ~Srikrishna_Iyer1
+  decision: Submission
+  file: 17.pdf
+  id: 17
+  openreview_id: E2UrpB7q8I
+  pdf_file: f7a0322a7e9366f353959c1c61e3bcc64197b323.pdf
+  title: 'When Babies Teach Babies: Can student knowledge sharing outperform Teacher-Guided
+    Distillation on small datasets?'
+- abstract: 'The size of neural models within natural language processing has increased
+    at a rapid pace in recent years.
+
+    With this increase in model size comes an increase in the amount of training data
+    required for training.
+
+    While these larger models have shown strong performance, their use comes with
+    added training and data costs, can be resource-prohibitive for many researchers,
+    and uses an amount of language data that is not always available for all languages.
+
+    This work focuses on exploring quality estimation as a method of data selection
+    or filtering.
+
+    The aim is to provide models with higher quality data as compared to larger amounts
+    of data.
+
+    This approach was applied to machine translation models with varying data sizes
+    as well as to the BabyLM Challenge.
+
+    Given the 100M word dataset provided in the BabyLM Challenge, we test out various
+    strategies for selecting 10M words for pretraining and use a curriculum learning
+    approach based on the quality estimation scoring.
+
+    We find small improvements in certain data settings.'
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area:
+    - Strict-small
+  authors:
+  - emails: hnguye30@villanova.edu
+    first_name: Hiep
+    homepage: https://hiepng05.netlify.app/
+    last_name: Nguyen
+    name: Hiep Nguyen
+    username: ~Hiep_Nguyen1
+  - emails: lyip@villanova.edu
+    first_name: Lynn
+    last_name: Yip
+    name: Lynn Yip
+    username: ~Lynn_Yip1
+  - emails: justin.debenedetto@villanova.edu
+    first_name: Justin
+    google_scholar_id: https://scholar.google.com/citations?user=FRqYgtIAAAAJ&hl=en&oi=ao
+    homepage: http://www.csc.villanova.edu/~jdeben/
+    institution: Villanova University
+    last_name: DeBenedetto
+    name: Justin DeBenedetto
+    semantic_scholar_id: https://www.semanticscholar.org/author/Justin-DeBenedetto/8115395
+    username: ~Justin_DeBenedetto1
+  decision: Submission
+  file: 18.pdf
+  id: 18
+  openreview_id: pJOwhWw1GN
+  pdf_file: 5fa41b594eb556bc53c94471514379f1c4f9de7a.pdf
+  title: Automatic Quality Estimation for Data Selection and Curriculum Learning
+- abstract: "In this paper we detail our submissions to the Strict and Strict-Small\
+    \ tracks of the 2024 BabyLM Challenge. \nWe approach this challenge with two methodologies:\
+    \ i) use of a novel dataset, and ii) development of a pre-training technique based\
+    \ on the fusion of child language acquisition with traditional masked language\
+    \ modeling, which we call curriculum masking. The novel dataset used for this\
+    \ task is based on user submissions to the Reddit forum (i.e., subreddit) ``Explain\
+    \ Like I'm Five'', which explains diverse concepts using simple language. Curriculum\
+    \ masking works by creating learning phases based on a standard child language\
+    \ development timeline, where the masked words learned by the model start with\
+    \ simple nouns and gradually expand to include more complex parts of speech. \
+    \ We show that using internet-based training data shows a small improvement in\
+    \ evaluation scores as compared to baseline training data. Our proposed pre-training\
+    \ method of curriculum masking is conceptually novel and also shows improved rates\
+    \ of learning over typical masked language modeling pre-training, potentially\
+    \ allowing for good performance with fewer total epochs on smaller training datasets.\
+    \ Code for the curriculum masking implementation is shared at https://github.com/evan-person/curriculumMaskingBabyLM2024."
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area:
+    - Strict-small
+    - Strict
+  authors:
+  - emails: eglucas@mtu.edu
+    first_name: Evan
+    institution: Michigan Technological University
+    last_name: Lucas
+    name: Evan Lucas
+    semantic_scholar_id: https://www.semanticscholar.org/author/Evan-Lucas/2055561641
+    username: ~Evan_Lucas1
+  - emails: dcgaines@mtu.edu
+    first_name: Dylan
+    google_scholar_id: https://scholar.google.com/citations?user=mdO_P5UAAAAJ&hl=en
+    homepage: https://www.mtu.edu/cs/department/people/faculty/gaines/
+    institution: Michigan Technological University
+    last_name: Gaines
+    name: Dylan Gaines
+    orcid: https://orcid.org/0000-0002-2747-7680
+    username: ~Dylan_Gaines1
+  - emails: trkosire@mtu.edu
+    first_name: Tagore
+    google_scholar_id: https://scholar.google.com/citations?view_op=new_profile&hl=en
+    homepage: https://pages.mtu.edu/~trkosire/
+    last_name: Kosireddy
+    middle_name: Rao
+    name: Tagore Rao Kosireddy
+    username: ~Tagore_Rao_Kosireddy1
+  - emails: kgli@mtu.edu
+    first_name: Kevin
+    last_name: Li
+    name: Kevin Li
+    username: ~Kevin_Li7
+  - dblp_id: https://dblp.org/pid/77/3805
+    emails: thavens@mtu.edu
+    first_name: Timothy
+    google_scholar_id: https://scholar.google.com/citations?user=JHGQqLcAAAAJ
+    homepage: http://timhavens.com
+    institution: Michigan Technological University
+    last_name: Havens
+    name: Timothy Havens
+    orcid: https://orcid.org/0000-0002-5746-3749
+    username: ~Timothy_Havens1
+  decision: Submission
+  file: 19.pdf
+  id: 19
+  openreview_id: I4Ed3HxB37
+  pdf_file: 729a2ac7027d6738b24b31a345b038992a708a19.pdf
+  title: Using Curriculum Masking Based on Child Language Development to Train a Large
+    Language Model with Limited Training Data
+- abstract: We introduce WhatIf, a lightly supervised data augmentation technique
+    that leverages word vectors to enhance training data for small-scale language
+    models. Inspired by reading prediction strategies used in education, WhatIf creates
+    new samples by substituting semantically similar words in the training data. We
+    evaluate WhatIf on multiple datasets, demonstrating small but consistent improvements
+    in downstream evaluation compared to baseline models. Finally, we compare WhatIf
+    to other small-scale data augmentation techniques and find that it provides comparable
+    quantitative results at a potential tradeoff to qualitative evaluation.
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area:
+    - Strict-small
+  authors:
+  - emails: alex.m.lyman@gmail.com
+    first_name: Alex
+    homepage: https://alexlyman.org/
+    institution: Brigham Young University
+    last_name: Lyman
+    middle_name: Mark
+    name: Alex Mark Lyman
+    username: ~Alex_Mark_Lyman1
+  - emails: hepnerb@byu.edu
+    first_name: Bryce
+    last_name: Hepner
+    name: Bryce Hepner
+    orcid: https://orcid.org/0000-0003-0062-5193
+    username: ~Bryce_Hepner1
+  decision: Submission
+  file: 20.pdf
+  id: 20
+  openreview_id: 7gOZVRICg4
+  pdf_file: 152308f3229e310d990c1d5e3bfae59336a0cc30.pdf
+  title: 'WhatIf: Leveraging Word Vectors for Small-Scale Data Augmentation'
+- abstract: 'Active Curriculum Language Modeling (ACLM; Hong et al., 2023) is a learner-directed
+    approach to training a language model. We proposed the original version of this
+    process in our submission to the BabyLM 2023 task, and now we propose an updated
+    ACLM process for the BabyLM 2024 task. ACLM involves an iteratively-and dynamically-constructed
+    curriculum informed over the training process by a model of uncertainty; other
+    training items that are similarly uncertain to a least certain candidate item
+    are prioritized. Our new process improves the similarity model so that it is more
+    dynamic, and we run ACLM over the most successful model from the BabyLM 2023 task:
+    ELC-BERT (Charpentier and Samuel, 2023). We find that while our models underperform
+    on fine-grained grammatical inferences, they outperform the BabyLM 2024 official
+    base-lines on common-sense and world-knowledge tasks. We make our code available
+    at https://github.com/asayeed/ActiveBaby.'
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area:
+    - Strict-small
+  authors:
+  - dblp_id: https://dblp.org/pid/56/7697-2
+    emails: xhong@coli.uni-saarland.de
+    first_name: Xudong
+    google_scholar_id: https://scholar.google.de/citations?user=aAaiRrQAAAAJ&hl=en
+    homepage: http://xudonghong.me/
+    institution: Saarland University and Max-Planck Institute for Informatics
+    last_name: Hong
+    name: Xudong Hong
+    orcid: https://orcid.org/0000-0002-7740-4447
+    semantic_scholar_id: https://www.semanticscholar.org/author/Xudong-Hong/2615648
+    username: ~Xudong_Hong1
+  - dblp_id: https://dblp.org/pid/03/11426
+    emails: sharid.loaiciga@gu.se
+    first_name: Sharid
+    google_scholar_id: https://scholar.google.com/citations?user=FgrwX34AAAAJ&hl=en
+    homepage: https://sharidloaiciga.github.io/
+    institution: University of Gothenburg, Sweden
+    last_name: Loáiciga
+    name: Sharid Loáiciga
+    orcid: https://orcid.org/0000-0002-1204-0400
+    semantic_scholar_id: https://www.semanticscholar.org/author/S.-Lo%C3%A1iciga/2947553
+    username: ~Sharid_Loáiciga1
+  - dblp_id: https://dblp.org/pid/69/4099
+    emails: asad.sayeed@gu.se
+    first_name: Asad
+    google_scholar_id: https://scholar.google.se/citations?user=mcQ2aj8AAAAJ&hl=en
+    homepage: https://clasp.gu.se/about/people/asad-sayeed
+    institution: University of Gothenburg
+    last_name: Sayeed
+    middle_name: B.
+    name: Asad B. Sayeed
+    username: ~Asad_B._Sayeed1
+  decision: Submission
+  file: 21.pdf
+  id: 21
+  openreview_id: HbTGkB60XV
+  pdf_file: 04d66a3b8617a379c4ccb447dc86ec8aeaecc9fa.pdf
+  title: A surprisal oracle for when every layer counts
+- abstract: 'While today''s large language models exhibit impressive abilities in
+    generating human-like text, they require massive amounts of data during training.
+    We here take inspiration from human cognitive development to train models in limited
+    data conditions. Specifically we present a self-synthesis approach that iterates
+    through four phases: Phase 1 sets up fundamental language abilities, training
+    the model from scratch on a small corpus. Language is then associated with the
+    visual environment in phase 2, integrating the model with a vision encoder to
+    generate descriptive captions from labeled images. In the "self-synthesis" phase
+    3, the model generates captions for unlabeled images, that it then uses to further
+    train its language component with a mix of synthetic, and previous real-world
+    text. This phase is meant to expand the model''s linguistic repertoire, similar
+    to humans self-annotating new experiences. Finally, phase 4 develops advanced
+    cognitive skills, by training the model on specific tasks such as visual question
+    answering and reasoning. Our approach offers a proof of concept for training a
+    multimodal model using a developmentally plausible amount of data.'
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area:
+    - Strict
+    - Multimodal
+    - Paper
+  authors:
+  - emails: badr@khamissi.com
+    first_name: Badr
+    google_scholar_id: https://scholar.google.com/citations?user=0l9UHtQAAAAJ&hl=en
+    homepage: https://bkhmsi.github.io
+    institution: EPFL - EPF Lausanne
+    last_name: AlKhamissi
+    name: Badr AlKhamissi
+    semantic_scholar_id: https://www.semanticscholar.org/author/Badr-AlKhamissi/2006905770
+    username: ~Badr_AlKhamissi1
+  - dblp_id: https://dblp.org/pid/295/0111
+    emails: yingtian.tang@epfl.ch
+    first_name: Yingtian
+    homepage: https://yingtiandt.github.io/
+    last_name: Tang
+    name: Yingtian Tang
+    username: ~Yingtian_Tang1
+  - emails: abdulkadir.gokce@epfl.ch
+    first_name: Abdulkadir
+    institution: EPFL - EPF Lausanne
+    last_name: Gokce
+    name: Abdulkadir Gokce
+    orcid: https://orcid.org/0000-0001-6559-3423
+    username: ~Abdulkadir_Gokce1
+  - emails: mehrer.hannes@gmail.com
+    first_name: Johannes
+    institution: EPFL - EPF Lausanne
+    last_name: Mehrer
+    name: Johannes Mehrer
+    orcid: https://orcid.org/0000-0002-4018-8197
+    username: ~Johannes_Mehrer1
+  - emails: martin.schrimpf@epfl.ch
+    first_name: Martin
+    google_scholar_id: https://scholar.google.com/citations?user=RiZ-RdwAAAAJ&hl=en
+    homepage: http://mschrimpf.com/
+    institution: EPFL - EPF Lausanne
+    last_name: Schrimpf
+    name: Martin Schrimpf
+    orcid: https://orcid.org/0000-0001-7766-7223
+    username: ~Martin_Schrimpf1
+  decision: Submission
+  file: 24.pdf
+  id: 24
+  openreview_id: 70Hkypl2gx
+  pdf_file: affee07eed3583067c5ffa7fa5899dfde3d87e16.pdf
+  title: 'Dreaming Out Loud: A Self-Synthesis Approach For Training Vision-Language
+    Models With Developmentally Plausible Data'
+- abstract: "While current large language models have achieved a remarkable success,\
+    \ their data efficiency remains a challenge to overcome. Recently it has been\
+    \ suggested that child-directed speech (CDS) can improve training data efficiency\
+    \ of modern language models based on Transformer neural networks. However, it\
+    \ is not yet understood which specific properties of CDS are effective for training\
+    \ these models. \nIn the context of the BabyLM Challenge, we focus on Variation\
+    \ Sets (VSs), sets of consecutive utterances expressing a similar intent with\
+    \ slightly different words and structures, which are ubiquitous in CDS. To assess\
+    \ the impact of VSs on training data efficiency, we augment CDS data with different\
+    \ proportions of artificial VSs and use these datasets to train an auto-regressive\
+    \ model, GPT-2. We find that the best proportion of VSs depends on the evaluation\
+    \ benchmark: BLiMP and GLUE scores benefit from the presence of VSs, but EWOK\
+    \ scores do not. Additionally, the results vary depending on multiple factors\
+    \ such as the number of epochs and the order of utterance presentation. Taken\
+    \ together, these findings suggest that VSs can have a beneficial influence on\
+    \ language models, while leaving room for further investigation."
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area:
+    - Strict-small
+  authors:
+  - emails: haga.akari.ha0@is.naist.jp
+    first_name: Akari
+    google_scholar_id: https://scholar.google.com/citations?user=Mkd23TkAAAAJ&hl=ja&oi=sra
+    homepage: https://akari000.github.io/about/
+    last_name: Haga
+    name: Akari Haga
+    username: ~Akari_Haga1
+  - emails: akiyofukatsu@g.ecc.u-tokyo.ac.jp
+    first_name: Akiyo
+    homepage: http://phiz.c.u-tokyo.ac.jp/~oseki/en/members.html
+    institution: Tokyo University, Tokyo Institute of Technology
+    last_name: Fukatsu
+    name: Akiyo Fukatsu
+    username: ~Akiyo_Fukatsu2
+  - emails: mlieynuatrp@gmail.com
+    first_name: Miyu
+    homepage: https://mlieynua.github.io/
+    last_name: Oba
+    name: Miyu Oba
+    username: ~Miyu_Oba1
+  - dblp_id: https://dblp.org/pid/32/10934
+    emails: a.bisazza@rug.nl
+    first_name: Arianna
+    homepage: https://www.cs.rug.nl/~bisazza/
+    institution: University of Groningen
+    last_name: Bisazza
+    name: Arianna Bisazza
+    semantic_scholar_id: https://www.semanticscholar.org/author/Arianna-Bisazza/3242253
+    username: ~Arianna_Bisazza1
+  - dblp_id: https://dblp.org/pid/249/6882
+    emails: oseki@g.ecc.u-tokyo.ac.jp
+    first_name: Yohei
+    google_scholar_id: https://scholar.google.com/citations?user=GshpLs8AAAAJ&hl=en&oi=ao
+    homepage: https://researchmap.jp/oseki/?lang=english
+    institution: University of Tokyo
+    last_name: Oseki
+    name: Yohei Oseki
+    orcid: https://orcid.org/0000-0002-1189-1588
+    semantic_scholar_id: https://www.semanticscholar.org/author/Yohei-Oseki/50856622
+    username: ~Yohei_Oseki1
+  decision: Submission
+  file: 25.pdf
+  id: 25
+  openreview_id: p6GPjEngWs
+  pdf_file: f57a98b24534c83be82cf4898657db631251f251.pdf
+  title: 'BabyLM Challenge: Exploring the effect of variation sets on language model
+    training efficiency'
+- abstract: We present a simple way to merge masked language modeling with causal
+    language modeling. This hybrid training objective results in a model that combines
+    the strengths of both modeling paradigms within a single transformer stack – GPT-BERT
+    can be transparently used like any standard causal or masked language model. We
+    test the pretraining process that enables this flexible behavior on the BabyLM
+    Challenge 2024. The results show that the hybrid pretraining outperforms masked-only
+    or causal-only models. We openly release the models, training corpora and code.
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area:
+    - Strict-small
+    - Strict
+  authors:
+  - dblp_id: https://dblp.org/pid/345/1961
+    emails: lgcharpe@ifi.uio.no
+    first_name: Lucas
+    google_scholar_id: https://scholar.google.com/citations?user=NcMx3eEAAAAJ&hl=en&oi=ao
+    homepage: https://www.mn.uio.no/ifi/english/people/aca/lgcharpe/
+    institution: University of Oslo
+    last_name: Charpentier
+    middle_name: Georges Gabriel
+    name: Lucas Georges Gabriel Charpentier
+    semantic_scholar_id: https://www.semanticscholar.org/author/Lucas-Georges-Gabriel-Charpentier/2214718277
+    username: ~Lucas_Georges_Gabriel_Charpentier1
+  - dblp_id: https://dblp.org/pid/160/7562
+    emails: davisamu@ifi.uio.no
+    first_name: David
+    google_scholar_id: https://scholar.google.com/citations?user=eh0roKUAAAAJ&hl=en
+    homepage: https://www.mn.uio.no/ifi/english/people/aca/davisamu/index.html
+    institution: University of Oslo
+    last_name: Samuel
+    name: David Samuel
+    orcid: https://orcid.org/0000-0003-2866-1022
+    semantic_scholar_id: https://www.semanticscholar.org/author/David-Samuel/2064321898
+    username: ~David_Samuel1
+  decision: Submission
+  file: 28.pdf
+  id: 28
+  openreview_id: z1GDwnkzXF
+  pdf_file: daa29ca753d6ca79ae939903250293baa1d3a3b3.pdf
+  title: 'BERT or GPT: why not both?'
+- abstract: We explore the impact of pre-training data composition on the performance
+    of small language models in a sample-efficient setting. Using datasets capped
+    at 10 million words, we evaluate several data sources—including child-directed
+    speech (CHILDES), classic fiction (Gutenberg), a mixed dataset (Mix), and synthetic
+    TinyStories—across different model sizes ranging from 18 million to 705 million
+    parameters. Our experiments show that smaller models (e.g., GPT2-18M and GPT2-44M)
+    benefit from training on diverse datasets like Mix, achieving better performance
+    on linguistic benchmarks. In contrast, larger models (e.g., GPT2-97M, GPT2-705M,
+    and LLaMA-360M) perform better when trained on more complex and rich datasets
+    like Gutenberg. Models trained on the CHILDES and TinyStories datasets underperformed
+    across all model sizes. These findings suggest that the optimal dataset for sample-efficient
+    training depends on the model size, and that neither child-directed speech nor
+    simplified stories are optimal for small language models of all sizes. We highlight
+    the importance of considering both dataset composition and model capacity for
+    effective sample-efficient language model training.
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area:
+    - Strict-small
+  authors:
+  - emails: hongmeng@stanford.edu
+    first_name: Hong
+    google_scholar_id: https://scholar.google.com/citations?user=1Gr2hNUAAAAJ&hl=en
+    last_name: Yam
+    middle_name: Meng
+    name: Hong Meng Yam
+    username: ~Hong_Meng_Yam1
+  - emails: nathanjp@stanford.edu
+    first_name: Nathan
+    last_name: Paek
+    name: Nathan Paek
+    username: ~Nathan_Paek1
+  decision: Submission
+  file: 29.pdf
+  id: 29
+  openreview_id: MNR6wUFyye
+  pdf_file: ef3403afc7addaaf06b8a3ad4f6d721c9556d557.pdf
+  title: What should Baby Models read? Exploring Sample-Efficient Data Composition
+    on Model Performance
+- abstract: We present BabyLlama-2, a 345 million parameter model distillation-pretrained
+    from two teachers on a 10 million word corpus for the BabyLM competition. On the
+    BLiMP and SuperGLUE benchmarks, BabyLlama-2 outperforms baselines trained on both
+    10 and 100 million word datasets with the same data mix, as well as its teacher
+    models. Through an extensive hyperparameter sweep, we demonstrate that the advantages
+    of distillation cannot be attributed to suboptimal hyperparameter selection of
+    the teachers. Our findings underscore the need for further investigation into
+    distillation techniques, particularly in data-limited settings.
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area:
+    - Strict-small
+  authors:
+  - emails: jeta@di.ku.dk
+    first_name: Jean-Loup
+    institution: University of Copenhagen
+    last_name: Tastet
+    name: Jean-Loup Tastet
+    orcid: https://orcid.org/0000-0003-1763-378X
+    username: ~Jean-Loup_Tastet1
+  - emails: inar.timiryasov@nbi.ku.dk
+    first_name: Inar
+    google_scholar_id: https://scholar.google.com/citations?user=ff_XscYAAAAJ&hl=en&oi=sra
+    institution: Copenhagen University, Niels Bohr Institute
+    last_name: Timiryasov
+    name: Inar Timiryasov
+    username: ~Inar_Timiryasov1
+  decision: Submission
+  file: 31.pdf
+  id: 31
+  openreview_id: DS5I2d9dk1
+  pdf_file: 87698e49406a3eca7c17bbda1c256ccd4501fda4.pdf
+  title: 'BabyLlama-2: Ensemble-Distilled Models Consistently Outperform Teachers
+    With Limited Data'
+- abstract: 'In this paper, we build off of the success of the previous BabyLM challenge
+    winner''s model, BabyLlama, to explore various methods of enhancing knowledge
+    distillation for small language models. Our main focus is on investigating how
+    small a language model can be while still maintaining competitive performance.
+    We experiment with three main approaches: (1) DistilledGPT-44M, which uses smaller
+    teacher models and a more compact student model compared to BabyLlama; (2) ContrastiveLlama-58M,
+    which incorporates contrastive loss into the knowledge distillation process; and
+    (3) MaskedAdversarialLlama-58M, incorporates adversarial loss into the knowledge
+    distillation process. Using the 10M-word dataset from the BabyLM challenge''s
+    strict-small track, we evaluate our models on the BLiMP, EWoK, and GLUE benchmarks.
+    Our results show that effective knowledge distillation can still be achieved with
+    significantly smaller teacher and student models. In particular, our model DistilledGPT-44M
+    is able to achieve better performance than one of last year''s winning entries,
+    LTG-BERT, while achieving similar performance but cutting training time by around
+    70\% and parameters by around 25\% compared to the other winning entry, BabyLlama.'
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area:
+    - Strict-small
+  authors:
+  - emails: hongmeng@stanford.edu
+    first_name: Hong
+    google_scholar_id: https://scholar.google.com/citations?user=1Gr2hNUAAAAJ&hl=en
+    last_name: Yam
+    middle_name: Meng
+    name: Hong Meng Yam
+    username: ~Hong_Meng_Yam1
+  - emails: nathanjp@stanford.edu
+    first_name: Nathan
+    last_name: Paek
+    name: Nathan Paek
+    username: ~Nathan_Paek1
+  decision: Submission
+  file: 32.pdf
+  id: 32
+  openreview_id: OpGZ7Zgku7
+  pdf_file: 15f0d09c977e2a73b1e7b29a7051c3ac716d705a.pdf
+  title: 'Teaching Tiny Minds: Exploring Methods to Enhance Knowledge Distillation
+    for Small Language Models'
+- abstract: 'We describe our contribution to the Strict and Strict-Small tracks of
+    the 2nd iteration of the BabyLM Challenge. The shared task is centered around
+    efficient pre-training given data constraints motivated by human development.  In
+    response, we study the effect of synthetic story data in language pre-training
+    using *TinyStories*: a recently introduced dataset of short stories. Initially,
+    we train GPT-Neo models on subsets of *TinyStories}*, while varying the amount
+    of available data. We find that, even with access to less than 100M words, the
+    models are able to generate high-quality, original completions to a given story,
+    and acquire substantial linguistic knowledge. To measure the effect of synthetic
+    story data, we train *LTG-BERT* encoder models on a combined dataset of: a subset
+    of *TinyStories*, story completions generated by GPT-Neo, and a subset of the
+    *BabyLM* dataset. Our experimentation reveals that synthetic data can occasionally
+    offer modest gains, but overall have a negative influence on linguistic understanding.
+    Our work offers an initial study on synthesizing story data in low resource settings
+    and underscores their potential for augmentation in data-constrained language
+    modeling. We publicly release our models and implementation on our GitHub.'
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area:
+    - Strict-small
+    - Strict
+  authors:
+  - emails: nikitastheodorop@gmail.com
+    first_name: Nikitas
+    google_scholar_id: https://scholar.google.com/citations?user=eqyKPGkAAAAJ&hl=en
+    last_name: Theodoropoulos
+    name: Nikitas Theodoropoulos
+    username: ~Nikitas_Theodoropoulos1
+  - emails: geofila@islab.ntua.gr
+    first_name: Giorgos
+    homepage: https://www.ails.ece.ntua.gr/people/geofila
+    institution: National Technical University of Athens
+    last_name: Filandrianos
+    name: Giorgos Filandrianos
+    orcid: https://orcid.org/0000-0002-7015-7746
+    username: ~Giorgos_Filandrianos1
+  - emails: vaslyb@ails.ece.ntua.gr
+    first_name: Vassilis
+    homepage: https://www.ails.ece.ntua.gr/people/vaslyb
+    last_name: Lyberatos
+    name: Vassilis Lyberatos
+    username: ~Vassilis_Lyberatos1
+  - emails: marialymp@islab.ntua.gr
+    first_name: Maria
+    google_scholar_id: https://scholar.google.com/citations?user=YNikyhIAAAAJ&hl=el
+    homepage: https://www.ails.ece.ntua.gr/people/marialymp
+    last_name: Lymperaiou
+    name: Maria Lymperaiou
+    orcid: https://orcid.org/0000-0001-9442-4186
+    semantic_scholar_id: https://www.semanticscholar.org/author/Maria-Lymperaiou/2184294391
+    username: ~Maria_Lymperaiou1
+  - dblp_id: https://dblp.org/pid/s/GBStamou
+    emails: gstam@cs.ntua.gr
+    first_name: Giorgos
+    institution: National Technical University of Athens
+    last_name: Stamou
+    name: Giorgos Stamou
+    username: ~Giorgos_Stamou1
+  decision: Submission
+  file: 34.pdf
+  id: 34
+  openreview_id: sgrdLZWWIy
+  pdf_file: cb622538b61ad9d57fa502ca7ddc1e4c1bacb505.pdf
+  title: 'BERTtime Stories: Investigating the Role of Synthetic Story Data in Language
+    Pre-training'
+- abstract: 'Causal Language Modeling (CLM) and Masked Language Modeling (MLM) are
+    two mainstream learning paradigms based on Transformer networks, specifically
+    the Decoder-only and Encoder-only architectures. The strengths of each paradigm
+    in downstream tasks have shown a mix of advantages and disadvantages. In the past
+    BabyLM Challenge 2023, although the MLM paradigm achieved the best average performance,
+    the CLM paradigm demonstrated significantly faster convergence rates. For the
+    BabyLM Challenge 2024, we propose a novel language modeling paradigm named $\textbf{AntLM}$,
+    which integrates both CLM and MLM to leverage the advantages of these two classic
+    paradigms. We chose the strict-small track and conducted experiments on two foundation
+    models: BabyLlama, representing CLM, and LTG-BERT, representing MLM. During the
+    training process for specific foundation models, we alternate between applying
+    CLM or MLM training objectives and causal or bidirectional attention masks. Experimental
+    results show that combining the two pretraining objectives leverages their strengths,
+    enhancing overall training performance. Under the same epochs, $AntLM_{BabyLlama}$
+    improves Macro-average by 1%, and $AntLM_{LTG-BERT}$ achieves a 2.2% increase
+    over the baselines.'
+  attributes:
+    paper_type: N/A
+    presentation_type: N/A
+    submitted_area:
+    - Strict-small
+  authors:
+  - emails: xryu@stu.ecnu.edu.cn
+    first_name: Xinru
+    last_name: Yu
+    name: Xinru Yu
+    orcid: https://orcid.org/0009-0005-2763-8498
+    username: ~Xinru_Yu1
+  - emails: binguo@stu.ecnu.edu.cn
+    first_name: Bin
+    last_name: Guo
+    name: Bin Guo
+    orcid: https://orcid.org/0009-0004-7308-8995
+    username: ~Bin_Guo7
+  - emails: shiweiluomo@gmail.com
+    first_name: Shiwei
+    homepage: https://github.com/LuoMoer
+    last_name: Luo
+    name: Shiwei Luo
+    username: ~Shiwei_Luo1
+  - emails: jiewang.cs@stu.ecnu.edu.cn
+    first_name: Jie
+    homepage: https://github.com/RmZeta2718
+    last_name: Wang
+    name: Jie Wang
+    username: ~Jie_Wang46
+  - emails: taoji@fudan.edu.cn
+    first_name: Tao
+    google_scholar_id: https://scholar.google.com/citations?hl=zh-CN&user=tZlj-O8AAAAJ
+    homepage: http://taoji.site/
+    last_name: Ji
+    name: Tao Ji
+    orcid: https://orcid.org/0000-0002-9957-6661
+    username: ~Tao_Ji1
+  - dblp_id: https://dblp.org/pid/17/7186
+    emails: wuyuanbin.fdu@gmail.com
+    first_name: Yuanbin
+    last_name: Wu
+    name: Yuanbin Wu
+    username: ~Yuanbin_Wu1
+  decision: Submission
+  file: 35.pdf
+  id: 35
+  openreview_id: p6i6H7spte
+  pdf_file: 4bc5b8386c8661ffa053279049f65161da5cdafd.pdf
+  title: 'AntLM: Bridging Causal and Masked Language Models'
