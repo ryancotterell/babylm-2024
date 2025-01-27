@@ -1,0 +1,33 @@
+- members:
+  - first_name: Michael
+    middle_name: Y.
+    institution: New York University
+    last_name: Hu
+  - first_name: Aaron
+    institution: Northeastern University and Technion -- Israel Institute of Technology
+    last_name: Mueller
+  - first_name: Candace
+    institution: Meta
+    last_name: Ross
+  - first_name: Adina
+    institution: FAIR (Meta Platforms Inc.)
+    last_name: Williams
+  - first_name: Tal
+    institution: New York University and Google
+    last_name: Linzen
+  - first_name: Chengxu
+    institution: Massachusetts Institute of Technology 
+    last_name: Zhuang
+  - first_name: Ryan
+    institution: ETH Zürich
+    last_name: Cotterell
+  - first_name: Alex
+    institution: ETH Zürich
+    last_name: Warstadt
+  - first_name: Leshem
+    institution: Massachusetts Institute of Technology and International Business Machines
+    last_name: Choshen
+  - first_name: Ethan Gotlieb
+    institution: Georgetown University
+    last_name: Wilcox
+  role: Organizing Committee

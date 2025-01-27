@@ -1,0 +1,31 @@
+book_title: The 2nd BabyLM Challenge at the 28th Conference on Computational Natural Language Learning
+event_name: The 2nd BabyLM Challenge at the 28th Conference on Computational Natural Language Learning
+volume_name: main
+cover_subtitle: Proceedings of the Second BabyLM Challenge
+anthology_venue_id: CoNLL
+start_date: 2024-11-15
+end_date: 2024-11-16
+isbn: TODO
+location: Miami, FL, USA
+editors:
+  - first_name: Michael
+    middle_name: Y.
+    last_name: Hu
+  - first_name: Aaron
+    last_name: Mueller
+  - first_name: Candace
+    last_name: Ross
+  - first_name: Adina
+    last_name: Williams
+  - first_name: Tal
+    last_name: Linzen
+  - first_name: Chengxu
+    last_name: Zhuang
+  - first_name: Ryan
+    last_name: Cotterell
+  - first_name: Alex
+    last_name: Warstadt
+  - first_name: Ethan
+    last_name: Wilcox
+publisher: Association for Computational Linguistics
+#watermark_book_title: Proceedings of the 21th Annual Meeting of the\\ Special Interest Group on Discourse and Dialogue
